@@ -1,0 +1,21 @@
+{
+  "generator-jhipster": {
+    "baseName": "opeSite",
+    "clientFramework": "angular",
+    "clientTestFrameworks": ["cypress"],
+    "clientTheme": "none",
+    "creationTimestamp": 1715552299315,
+    "cypressAudit": true,
+    "cypressCoverage": false,
+    "devServerPort": 4200,
+    "enableTranslation": false,
+    "entities": [],
+    "jhipsterVersion": "8.4.0",
+    "microfrontend": null,
+    "microfrontends": [],
+    "nativeLanguage": "en",
+    "skipServer": true,
+    "testFrameworks": ["cypress"],
+    "withAdminUi": false
+  }
+}

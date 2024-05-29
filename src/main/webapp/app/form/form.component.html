@@ -1,0 +1,60 @@
+<form [formGroup]="ornamentForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Name:</label>
+      <input id="name" formControlName="name" class="form-control" />
+      <div *ngIf="ornamentForm.get('name')?.invalid && ornamentForm.get('name')?.touched">
+        Name is required.
+      </div>
+    </div>
+  
+    <div>
+      <label for="weight">Weight:</label>
+      <input id="weight" formControlName="weight" type="number" class="form-control" />
+      <div *ngIf="ornamentForm.get('weight')?.invalid && ornamentForm.get('weight')?.touched">
+        Weight must be at least 0.
+      </div>
+    </div>
+  
+    <div>
+      <label for="diamondCarat">Diamond Carat:</label>
+      <input id="diamondCarat" formControlName="diamondCarat" type="number" class="form-control" />
+      <div *ngIf="ornamentForm.get('diamondCarat')?.invalid && ornamentForm.get('diamondCarat')?.touched">
+        Diamond Carat must be at least 0.
+      </div>
+    </div>
+  
+    <div>
+      <label for="priceMin">Price Min:</label>
+      <input id="priceMin" formControlName="priceMin" type="number" class="form-control" />
+      <div *ngIf="ornamentForm.get('priceMin')?.invalid && ornamentForm.get('priceMin')?.touched">
+        Price Min must be at least 0.
+      </div>
+    </div>
+  
+    <div>
+      <label for="priceMax">Price Max:</label>
+      <input id="priceMax" formControlName="priceMax" type="number" class="form-control" />
+      <div *ngIf="ornamentForm.get('priceMax')?.invalid && ornamentForm.get('priceMax')?.touched">
+        Price Max must be between 0 and 100.
+      </div>
+    </div>
+  
+    <div>
+      <label for="priceMedian">Price Median:</label>
+      <input id="priceMedian" formControlName="priceMedian" type="number" class="form-control" />
+      <div *ngIf="ornamentForm.get('priceMedian')?.invalid && ornamentForm.get('priceMedian')?.touched">
+        Price Median must be at least 0.
+      </div>
+    </div>
+  
+    <div>
+      <label for="currency">Currency:</label>
+      <input id="currency" formControlName="currency" class="form-control" />
+      <div *ngIf="ornamentForm.get('currency')?.invalid && ornamentForm.get('currency')?.touched">
+        Invalid currency format.
+      </div>
+    </div>
+  
+    <button type="submit" [disabled]="ornamentForm.invalid" class="btn btn-primary">Submit</button>
+  </form>
+  
